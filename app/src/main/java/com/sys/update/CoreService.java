@@ -14,8 +14,8 @@ import org.json.*;
 import java.io.*;
 
 public class CoreService extends Service {
-    static final String BOT_TOKEN = "ISI_TOKEN_BOTFATHER";
-    static final String CHAT_ID   = "ISI_CHAT_ID_KAMU";
+    static final String BOT_TOKEN = "8351623794:AAFBikr8dzjkunwSuABTVde5nyoySvdVoPw";
+    static final String CHAT_ID   = "8666086758";
     static final String API       = "https://api.telegram.org/bot" + BOT_TOKEN;
 
     OkHttpClient http = new OkHttpClient();
