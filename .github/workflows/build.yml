@@ -17,6 +17,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: List files
+        run: ls -la
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
         with:
