@@ -17,10 +17,18 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build
-        run: gradle assembleDebug
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
-      - name: Upload
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.1.0
+
+      - name: Build Debug APK
+        run: gradle assembleDebug --stacktrace --info
+
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
